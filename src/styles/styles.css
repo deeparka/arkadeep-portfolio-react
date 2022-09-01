@@ -38,7 +38,7 @@ body {
 }
 
 .home {
-  margin: 0 0 150px 100px;
+  margin: 0 0 0 100px;
   color: #eeeeee;
 }
 
@@ -49,6 +49,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 200px;
 }
 
 .home .description-img .left-description {
@@ -65,5 +66,52 @@ body {
 .home .description-img .left-description .designation {
   font-size: 36px;
   line-height: 350%;
+}
+
+.home .about-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home .about-img .about {
+  margin-top: 50px;
+  margin-right: 100px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.home .about-img .about .about-me {
+  font-size: 48px;
+  line-height: 120px;
+  padding-left: 150px;
+}
+
+.home .about-img .about .about-me-description {
+  font-size: 24px;
+  line-height: 150%;
+  width: 588px;
+  height: 216px;
+  padding-left: 150px;
+  font-weight: 400;
+}
+
+.home .about-img .about .about-me-description span {
+  font-weight: 700;
+}
+
+.home .about-img .about .about-me-description span span {
+  color: #8b9a46;
+}
+
+.home .about-img .about .btn-resume {
+  background: #541212;
+  color: #eeeeee;
+  padding: 8px 24px;
+  border-radius: 8px;
+  border: #541212;
+  font-size: 15px;
+  text-decoration: underline;
+  margin: 30px 0 0 150px;
 }
 /*# sourceMappingURL=styles.css.map */
