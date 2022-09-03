@@ -9,7 +9,7 @@ export const NavBar = () => {
                     <span className="about">About</span>
                     <span className="skills">Skills</span>
                     <span className="project">Project</span>
-                    <span>Contact</span>
+                    <span className="contact">Contact</span>
                 </div>
             </div>
         </div>
