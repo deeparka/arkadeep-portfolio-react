@@ -2,7 +2,7 @@ import React from "react";
 
 export const NavBar = () => {
     return (
-        <div className="navbar">
+        <nav className="navbar">
             <div className="nav-wrapper">
                 <div className="name">Arkadeep Prasad</div>
                 <div className="right-nav">
@@ -12,6 +12,6 @@ export const NavBar = () => {
                     <span className="contact">Contact</span>
                 </div>
             </div>
-        </div>
+        </nav>
     );
 };

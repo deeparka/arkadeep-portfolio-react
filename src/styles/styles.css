@@ -43,7 +43,6 @@ body {
 }
 
 .home {
-  margin: 0 0 0 100px;
   color: #eeeeee;
 }
 
@@ -54,7 +53,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 200px;
+  margin: 0 0 200px 100px;
 }
 
 .home .description-img .left-description {
@@ -77,7 +76,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 200px;
+  margin: 0 0 200px 100px;
 }
 
 .home .about-img .about {
@@ -123,7 +122,7 @@ body {
 }
 
 .home .skillset {
-  margin-right: 100px;
+  margin: 0 120px 100px 100px;
 }
 
 .home .skillset .skillset-headline {
@@ -170,6 +169,9 @@ body {
 
 .home .skillset .figma-html-css .figma .figma-progress {
   margin-top: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .home .skillset .figma-html-css .html {
@@ -189,6 +191,9 @@ body {
 
 .home .skillset .figma-html-css .html .html-progress {
   margin-top: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .home .skillset .figma-html-css .css {
@@ -208,6 +213,9 @@ body {
 
 .home .skillset .figma-html-css .css .css-progress {
   margin-top: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .home .skillset .sass-tailwind-js {
@@ -237,6 +245,9 @@ body {
 
 .home .skillset .sass-tailwind-js .sass .sass-progress {
   margin-top: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .home .skillset .sass-tailwind-js .tailwind {
@@ -256,6 +267,9 @@ body {
 
 .home .skillset .sass-tailwind-js .tailwind .tailwind-progress {
   margin-top: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .home .skillset .sass-tailwind-js .js {
@@ -275,10 +289,13 @@ body {
 
 .home .skillset .sass-tailwind-js .js .js-progress {
   margin-top: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .home .skillset .react {
-  margin-left: 494px;
+  margin-left: 478px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -295,16 +312,19 @@ body {
 
 .home .skillset .react .react-progress {
   margin-top: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .home .check-out {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 60px 100px 200px 340px;
+  margin: 60px 100px 200px 440px;
 }
 
-.home .check-out p {
+.home .check-out .take-a-look {
   font-style: normal;
   font-weight: 500;
   font-size: 45px;
@@ -319,5 +339,134 @@ body {
   border-radius: 8px;
   border: #541212;
   cursor: pointer;
+}
+
+.home .connection {
+  margin: 0 100px 200px;
+}
+
+.home .connection .connection-headline {
+  width: 416px;
+  height: 62px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 72px;
+  margin: 0 0 150px 450px;
+}
+
+.home .connection .connection-applications {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home .connection .connection-applications .gmail {
+  margin-left: 250px;
+}
+
+.home .connection .connection-applications .gmail .gmail-img {
+  width: 135px;
+  height: 94px;
+  padding-left: 35px;
+}
+
+.home .connection .connection-applications .gmail .gmail-id {
+  padding-top: 20px;
+}
+
+.home .connection .connection-applications .phone {
+  margin-left: 62px;
+}
+
+.home .connection .connection-applications .phone .phone-img {
+  width: 135px;
+  height: 94px;
+}
+
+.home .connection .connection-applications .phone .phone-number {
+  padding-top: 20px;
+}
+
+.home .connection .connection-applications .linkedin {
+  margin-left: 62px;
+}
+
+.home .connection .connection-applications .linkedin .linkedin-img {
+  width: 135px;
+  height: 94px;
+  padding-left: 5px;
+}
+
+.home .connection .connection-applications .linkedin a {
+  display: block;
+  padding-top: 20px;
+  color: #eeeeee;
+}
+
+.home .connection .connection-applications .github {
+  margin-left: 62px;
+}
+
+.home .connection .connection-applications .github .github-img {
+  width: 135px;
+  height: 94px;
+}
+
+.home .connection .connection-applications .github a {
+  display: block;
+  padding: 20px 0 0 30px;
+  color: #eeeeee;
+}
+
+.home form {
+  margin: 0 100px 200px 630px;
+}
+
+.home form .form-title {
+  margin-bottom: 70px;
+}
+
+.home form .form-title h1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 45px;
+  margin: 0;
+}
+
+.home form .form-title .underline {
+  width: 330px;
+  height: 6px;
+  margin-left: 20px;
+  background: #541212;
+  border-radius: 6px;
+}
+
+.home form .name .name-label {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.home form .name .input-name {
+  display: block;
+  width: 400px;
+  height: 40px;
+  background: #1e1e1e;
+  border-radius: 8px;
+  border: #1e1e1e;
+}
+
+.home footer .footer-icons {
+  margin: 0 100px 0 630px;
+}
+
+.home footer .copyright {
+  margin: 0 100px 0px 630px;
+}
+
+.home footer .footer-vector img {
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
