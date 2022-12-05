@@ -1,12 +1,11 @@
 import { Home } from "./components/Home";
 import { NavBar } from "./components/NavBar";
-import "./styles/styles.scss";
 
 function App() {
     return (
-        <div className="App">
+        <div className="flex">
             <NavBar />
-            <Home />
+            {/* <Home /> */}
         </div>
     );
 }
