@@ -6,7 +6,7 @@ function App() {
     return (
         <div className="bg-customBlack min-h-screen">
             <Router>
-                <div className="text-customWhite relative">
+                <div className="text-customWhite">
                     <NavBar />
                     <Routes>
                         <Route exact path="/" element={<Home />}/>
