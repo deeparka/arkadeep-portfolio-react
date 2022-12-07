@@ -5,13 +5,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      margin: {
+      spacing: {
         '26': '100px'
       }
     },
     colors: {
-      'customBlack': '#0f0e0e',
-      'customWhite': '#eeeeee'
+      'customBlack': '#171717',
+      'customGrey': '#444444',
+      'customRed': '#DA0037',
+      'customWhite': '#EDEDED'
     }
   },
   plugins: [],

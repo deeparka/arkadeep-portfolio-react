@@ -2,7 +2,7 @@ import React from "react";
 
 const NavBar = () => {
     return (
-        <nav className="flex py-5 justify-between">
+        <nav className="fixed top-0 left-0 right-0 bg-customGrey flex py-6 justify-between px-26">
             <h1 className="font-bold text-lg">Arkadeep Prasad</h1>
             <div className="flex">
                 <div className="font-bold mr-16 cursor-pointer" onClick={()=> console.log('You clicked about')}>About</div>
