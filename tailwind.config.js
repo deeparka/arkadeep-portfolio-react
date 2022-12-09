@@ -29,6 +29,9 @@ module.exports = {
     },
     backgroundImage: {
       'body-background': "url('/src/images/bg-leaf.webp')"
+    },
+    rotate: {
+      '17': '17deg'
     }
   },
   plugins: [],
