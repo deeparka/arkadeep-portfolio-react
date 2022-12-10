@@ -1,14 +1,15 @@
 import React from "react";
 
-export const ProgressBar = ({
+const ProgressBar = ({
     backgroundColorOne,
     backgroundColorTwo,
     progressValue,
     height,
+    width
 }) => {
     const parentBar = {
         height: height,
-        width: "228.85px",
+        width: "200px",
         backgroundColor: backgroundColorOne,
         borderRadius: 40,
         // margin: 50,
@@ -27,3 +28,5 @@ export const ProgressBar = ({
         </div>
     );
 };
+
+export default ProgressBar
