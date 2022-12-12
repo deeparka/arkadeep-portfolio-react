@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import gmail from "../images/gmail.png";
 import linkedin from "../images/linkedin.png";
 import whatsapp from "../images/whatsapp.png";
 import github from "../images/github.png";
 
 const Home = () => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+
+  function handleSubmit(e) {
+    e.preventDefault()
+    console.log(name, email, message)
+  }
+
   return (
     <div className="pt-16 sm:pt-20">
       {/* Name */}
@@ -82,8 +91,12 @@ const Home = () => {
             </p>
             <div className="flex items-center justify-center space-x-3 my-8 lg:block">
               <p className="text-xl lg:hidden">Take a look at my works</p>
-              <button className="bg-customRed px-4 py-1 rounded-xl text-sm block lg:hidden">Click Here</button>
-              <button className="hidden bg-customRed rounded-xl text-xl px-14 py-3 shadow-same lg:inline-flex">Projects</button>
+              <button className="bg-customRed px-4 py-1 rounded-xl text-sm block lg:hidden">
+                Click Here
+              </button>
+              <button className="hidden bg-customRed rounded-xl text-xl px-14 py-3 shadow-same lg:inline-flex">
+                Projects
+              </button>
             </div>
           </div>
           <div className="lg:col-span-6">
@@ -130,6 +143,34 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Message Form */}
+      <div className="bg-body-background mt-20 py-20 content-center px-8 md:px-16 lg:px-100px">
+        <div className="py-12 px-6 bg-customGrey max-w-3xl m-auto rounded-xl shadow-xl">
+          <h1 className="text-center mb-6 text-xl sm:text-4xl">Send a message</h1>
+          <form onSubmit={handleSubmit}>
+            <div className="flex flex-col items-center space-y-8">
+              {/* Name */}
+              <div className="flex flex-wrap flex-col items-start w-full">
+                <label className="font-bold mb-2">Name</label>
+                <input type="text" className="text-customBlack rounded-md p-2 w-full focus:outline-none focus:ring focus:ring-customBlack md:p-3" placeholder="Name: John Doe" onChange={e => setName(e.target.value)} />
+              </div>
+              {/* Email */}
+              <div className="flex flex-wrap flex-col items-start w-full">
+                <label className="font-bold mb-2">Email</label>
+                <input type="text" className="text-customBlack rounded-md p-2 w-full focus:outline-none focus:ring focus:ring-customBlack md:p-3" placeholder="johndoe37@gmail.com" onChange={e => setEmail(e.target.value)} />
+              </div>
+              {/* Message */}
+              <div className="flex flex-wrap flex-col items-start w-full">
+                <label className="font-bold mb-2">Message</label>
+                <textarea className="text-customBlack rounded-md w-full p-2 focus:outline-none focus:ring focus:ring-customBlack" cols={30} rows={10} placeholder='Your Message' onChange={e => setMessage(e.target.value)}></textarea>
+              </div>
+              {/* Send Button */}
+              <button className="border rounded-md border-customRed bg-customRed p-2 w-full md:p-3">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };
