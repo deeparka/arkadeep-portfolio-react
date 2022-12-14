@@ -3,6 +3,7 @@ import gmail from "../images/gmail.png";
 import linkedin from "../images/linkedin.png";
 import whatsapp from "../images/whatsapp.png";
 import github from "../images/github.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [name, setName] = useState("");
@@ -56,9 +57,7 @@ const Home = () => {
           </div>
           <div className="">
             <img src={linkedin} alt="LinkedIn" className="h-28 w-28 ml-2" />
-            <a
-              href="https://www.linkedin.com/in/arkadeep-prasad-1b5074201/"
-            >
+            <a href="https://www.linkedin.com/in/arkadeep-prasad-1b5074201/">
               Arkadeep Prasad
             </a>
           </div>
@@ -93,9 +92,11 @@ const Home = () => {
               <button className="bg-customRed px-4 py-1 rounded-xl text-sm block lg:hidden">
                 Click Here
               </button>
-              <button className="hidden bg-customRed rounded-xl text-xl px-14 py-3 shadow-same lg:inline-flex">
-                Projects
-              </button>
+              <Link to="/projects">
+                <button className="hidden bg-customRed rounded-xl text-xl px-14 py-3 shadow-same lg:inline-flex">
+                  Projects
+                </button>
+              </Link>
             </div>
           </div>
           <div className="lg:col-span-6">
