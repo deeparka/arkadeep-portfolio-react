@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import gmail from "../images/gmail.png";
 import linkedin from "../images/linkedin.png";
 import whatsapp from "../images/whatsapp.png";
 import github from "../images/github.png";
 import { Link } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 
 const Home = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const aboutRef = useRef();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -16,7 +18,9 @@ const Home = () => {
   }
 
   return (
-    <div className="pt-16 sm:pt-20">
+    <div className="pt-16 space-y-24 sm:pt-20">
+      {/* Scroll to top component is for render the page from starting */}
+      <ScrollToTop />
       {/* Name */}
       <div className="bg-body-background bg-cover pt-48 pb-40 px-5 text-center md:px-0">
         <h1 className="lg:tracking-wider">Hello, my name is Arkadeep Prasad</h1>
@@ -29,7 +33,7 @@ const Home = () => {
       </div>
 
       {/* About Me */}
-      <section id="about" className="pt-24 text-center">
+      <section ref={aboutRef} id="about" className="text-center">
         <h1>About Me</h1>
         <div className="bg-customRed mx-auto mt-2 mb-5 w-28 h-1 rounded" />
         <p className="px-6 text-xl sm:px-8 md:px-16 lg:px-100px">
@@ -41,14 +45,14 @@ const Home = () => {
           give the users a great user experience. I always try to think about
           what can make the users happy while using my applications.
         </p>
+        {/* only for smaller screen than medium  */}
+        <button className="bg-customRed mt-6 px-14 py-3 rounded-xl text-xl shadow-same md:hidden">
+          Contacts
+        </button>
       </section>
 
       {/* Contacts */}
-      <section id="contact" className="pt-16 text-center md:px-16 lg:px-100px">
-        {/* only for smaller screen than medium */}
-        <button className="bg-customRed mb-6 px-14 py-3 rounded-xl text-xl shadow-same md:hidden">
-          Contacts
-        </button>
+      <section id="contact" className="text-center md:px-16 lg:px-100px">
         {/* only for bigger screen than medium */}
         <div className="hidden md:flex items-start justify-center py-16 md:space-x-11 md:text-xs lg:space-x-20 lg:text-sm">
           <div className="">
@@ -73,12 +77,9 @@ const Home = () => {
       </section>
 
       {/* Skills */}
-      <section
-        id="skills"
-        className="pt-16 text-center px-8 md:px-16 lg:px-100px"
-      >
+      <section id="skills" className="text-center px-8 md:px-16 lg:px-100px">
         <div className="lg:grid grid-cols-12">
-          <div className="my-20 hidden md:block lg:col-span-6 lg:my-0">
+          <div className="mb-20 hidden md:block lg:col-span-6 lg:my-0">
             <h1 className="">Technologies I've worked with</h1>
             <div className="bg-customRed mx-auto mt-2 mb-5 w-60 h-1 rounded lg:mb-7" />
             <p className="text-xl">
@@ -88,10 +89,14 @@ const Home = () => {
               knowledge about Wireframing, Prototype etc. in Figma.
             </p>
             <div className="flex items-center justify-center space-x-3 my-8 lg:block">
+              {/* for medium screen */}
               <p className="text-xl lg:hidden">Take a look at my works</p>
-              <button className="bg-customRed px-4 py-1 rounded-xl text-sm block lg:hidden">
-                Click Here
-              </button>
+              <Link to="/projects">
+                <button className="bg-customRed px-4 py-1 rounded-xl text-sm block lg:hidden">
+                  Click Here
+                </button>
+              </Link>
+              {/* for large screens and bigger */}
               <Link to="/projects">
                 <button className="hidden bg-customRed rounded-xl text-xl px-14 py-3 shadow-same lg:inline-flex">
                   Projects
@@ -145,7 +150,7 @@ const Home = () => {
       </section>
 
       {/* Message Form */}
-      <div className="bg-body-background mt-20 py-24 content-center px-8 md:px-16 lg:px-100px">
+      <div className="bg-body-background py-24 content-center px-8 md:px-16 lg:px-100px">
         <div className="py-12 px-6 bg-customGrey max-w-3xl m-auto rounded-xl drop-shadow-lg">
           <h1 className="text-center mb-6 text-xl sm:text-4xl">
             Send a message

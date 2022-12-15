@@ -1,9 +1,11 @@
 import React from "react";
+import ScrollToTop from "./ScrollToTop";
 
 function Projects() {
   return (
-    <div className="mb-6 pt-16 px-6 flex flex-wrap justify-evenly sm:px-8 sm:pt-20 md:px-16 lg:px-100px">
-      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:my-14 py-4 px-6 bg-customGrey group">
+    <div className="mb-6 pt-16 px-6 flex flex-wrap justify-around gap-5 sm:px-8 sm:pt-20 md:px-16 lg:px-100px">
+      <ScrollToTop/>
+      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey group">
         <div className="space-y-3">
           <h2 className="">Twitter 2.0</h2>
           <p className="text-lg">
@@ -56,7 +58,7 @@ function Projects() {
           </a>
         </div>
       </div>
-      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:my-14 py-4 px-6 bg-customGrey group">
+      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey group">
         <div className="space-y-3">
           <h2 className="">Medium 2.0</h2>
           <p className="text-lg">
@@ -108,7 +110,7 @@ function Projects() {
           </a>
         </div>
       </div>
-      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:my-14 py-4 px-6 bg-customGrey group ">
+      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey group ">
         <div className="space-y-3">
           <h2 className="">Hulu 2.0</h2>
           <p className="text-lg">
@@ -152,7 +154,7 @@ function Projects() {
           </a>
         </div>
       </div>
-      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:my-14 py-4 px-6 bg-customGrey group ">
+      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey group ">
         <div className="space-y-3">
           <h2 className="">Weather Application</h2>
           <p className="text-lg">
@@ -199,7 +201,7 @@ function Projects() {
           </a>
         </div>
       </div>
-      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:my-14 py-4 px-6 bg-customGrey group ">
+      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey group ">
         <div className="space-y-3">
           <h2 className="">Dojo-Blog Application</h2>
           <p className="text-lg">
@@ -243,7 +245,7 @@ function Projects() {
           </a>
         </div>
       </div>
-      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:my-14 py-4 px-6 bg-customGrey group ">
+      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey group ">
         <div className="space-y-3">
           <h2 className="">Scramble Game Application</h2>
           <p className="text-lg">
@@ -283,7 +285,7 @@ function Projects() {
           </a>
         </div>
       </div>
-      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:my-14 py-4 px-6 bg-customGrey group ">
+      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey group ">
         <div className="space-y-3">
           <h2 className="">Bluetooth KeyChain Web Application</h2>
           <p className="text-lg">
@@ -322,7 +324,7 @@ function Projects() {
           </a>
         </div>
       </div>
-      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:my-14 py-4 px-6 bg-customGrey group ">
+      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey group ">
         <div className="space-y-3">
           <h2 className="">Bluetooth KeyChain iOS Application</h2>
           <p className="text-lg">
@@ -363,7 +365,7 @@ function Projects() {
           </a>
         </div>
       </div>
-      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:my-14 py-4 px-6 bg-customGrey group ">
+      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey group ">
         <div className="space-y-3">
           <h2 className="">Quiz Web Application</h2>
           <p className="text-lg">
