@@ -26,7 +26,7 @@ const Home = () => {
         <h1 className="lg:tracking-wider">Hello, my name is Arkadeep Prasad</h1>
         <h4 className="my-5">I’m an UI & Front-End Developer</h4>
         <button className="bg-customRed my-3 px-14 py-3 rounded-xl text-xl shadow-lg shadow-same">
-          <a href="https://drive.google.com/file/d/1URgGYuzjth75d8SMpo1x0uyWCxjXYfrT/view?usp=sharing">
+          <a href="https://drive.google.com/file/d/1URgGYuzjth75d8SMpo1x0uyWCxjXYfrT/view?usp=sharing" target='_blank' rel="noreferrer">
             Resume
           </a>
         </button>
