@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import gmail from "../images/gmail.png";
 import linkedin from "../images/linkedin.png";
 import whatsapp from "../images/whatsapp.png";
@@ -10,7 +10,6 @@ const Home = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const aboutRef = useRef();
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -26,14 +25,19 @@ const Home = () => {
         <h1 className="lg:tracking-wider">Hello, my name is Arkadeep Prasad</h1>
         <h4 className="my-5">I’m an UI & Front-End Developer</h4>
         <button className="bg-customRed my-3 px-14 py-3 rounded-xl text-xl shadow-lg shadow-same">
-          <a href="https://drive.google.com/file/d/1URgGYuzjth75d8SMpo1x0uyWCxjXYfrT/view?usp=sharing" target='_blank' rel="noreferrer">
+          {/* display this text on medium and less screens */}
+          <a href="https://drive.google.com/file/d/1URgGYuzjth75d8SMpo1x0uyWCxjXYfrT/view?usp=sharing" className="inline lg:hidden">
+            Resume
+          </a>
+          {/* display this text on large and greater screens */}
+          <a href="https://drive.google.com/file/d/1URgGYuzjth75d8SMpo1x0uyWCxjXYfrT/view?usp=sharing" target='_blank' rel="noreferrer" className="hidden lg:inline">
             Resume
           </a>
         </button>
       </div>
 
       {/* About Me */}
-      <section ref={aboutRef} id="about" className="text-center">
+      <section id="about" className="text-center">
         <h1>About Me</h1>
         <div className="bg-customRed mx-auto mt-2 mb-5 w-28 h-1 rounded" />
         <p className="px-6 text-xl sm:px-8 md:px-16 lg:px-100px">
