@@ -1,5 +1,5 @@
 import React from "react";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "../lib/ScrollToTop";
 
 function Projects() {
   return (

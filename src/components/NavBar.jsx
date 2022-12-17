@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import arkadeepImage from '../images/Arkadeep.jpg'
 import { handleAboutClick, handleContactClick, handleSkillsClick } from "../lib/helper";
 import MenuDrawer from "./MenuDrawer";
+import { RxCross1 } from "react-icons/rx";
 
 const NavBar = () => {
     const [showMenu, setShowMenu] = useState(false)
@@ -17,9 +18,10 @@ const NavBar = () => {
                 <img className="rounded-full h-9 w-9 mr-2" src={arkadeepImage} alt="" />
                 <p className="lg:font-bold sm:text-sm md:text-lg">Arkadeep Prasad</p>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 sm:hidden block cursor-pointer" onClick={handleMenu}>
+            {!showMenu && <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 sm:hidden block" onClick={handleMenu}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
+            </svg>}
+            {showMenu && <RxCross1 onClick={handleMenu} />}
             {showMenu && <MenuDrawer />}
             <div className="hidden sm:flex">
                 <Link to='/'>

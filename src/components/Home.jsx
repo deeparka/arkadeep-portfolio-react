@@ -4,7 +4,7 @@ import linkedin from "../images/linkedin.png";
 import whatsapp from "../images/whatsapp.png";
 import github from "../images/github.png";
 import { Link } from "react-router-dom";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "../lib/ScrollToTop";
 
 const Home = () => {
   const [name, setName] = useState("");
