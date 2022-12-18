@@ -10,14 +10,20 @@ const Home = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [submitted, setSubmitted] = useState(false)
 
   function handleSubmit(e) {
     e.preventDefault();
     console.log(name, email, message);
+    setSubmitted(true)
 
-    // if (name && email && message) {
-      
-    // }
+    if (name && email && message) {
+      fetch("http://localhost:8000/data", {
+        method: "POST",
+        headers: {"Content-type": "application/json"},
+        body: JSON.stringify({ name, email, message }),
+      });
+    }
   }
 
   return (
@@ -168,10 +174,10 @@ const Home = () => {
       {/* Message Form */}
       <div className="bg-body-background py-24 content-center px-8 md:px-16 lg:px-100px">
         <div className="py-12 px-6 bg-customGrey max-w-3xl m-auto rounded-xl drop-shadow-lg">
-          <h1 className="text-center mb-6 text-xl sm:text-4xl">
+          {!submitted && (<h1 className="text-center mb-6 text-xl sm:text-4xl">
             Send a message
-          </h1>
-          <form onSubmit={handleSubmit}>
+          </h1>)}
+          {!submitted && (<form onSubmit={handleSubmit}>
             <div className="flex flex-col items-center space-y-8">
               {/* Name */}
               <div className="flex flex-wrap flex-col items-start w-full">
@@ -215,7 +221,11 @@ const Home = () => {
                 Send
               </button>
             </div>
-          </form>
+          </form>)}
+          {/* after submitting the form */}
+          {submitted && (<h1 className="text-center mb-6 text-xl sm:text-4xl">
+            Thank you for sending me message
+          </h1>)}
         </div>
       </div>
     </div>
