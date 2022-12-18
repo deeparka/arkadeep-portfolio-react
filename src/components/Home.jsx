@@ -14,6 +14,10 @@ const Home = () => {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(name, email, message);
+
+    // if (name && email && message) {
+      
+    // }
   }
 
   return (
@@ -26,11 +30,19 @@ const Home = () => {
         <h4 className="my-5">I’m an UI & Front-End Developer</h4>
         <button className="bg-customRed my-3 px-14 py-3 rounded-xl text-xl shadow-lg shadow-same">
           {/* display this text on medium and less screens */}
-          <a href="https://drive.google.com/file/d/1URgGYuzjth75d8SMpo1x0uyWCxjXYfrT/view?usp=sharing" className="inline lg:hidden">
+          <a
+            href="https://drive.google.com/file/d/1URgGYuzjth75d8SMpo1x0uyWCxjXYfrT/view?usp=sharing"
+            className="inline lg:hidden"
+          >
             Resume
           </a>
           {/* display this text on large and greater screens */}
-          <a href="https://drive.google.com/file/d/1URgGYuzjth75d8SMpo1x0uyWCxjXYfrT/view?usp=sharing" target='_blank' rel="noreferrer" className="hidden lg:inline">
+          <a
+            href="https://drive.google.com/file/d/1URgGYuzjth75d8SMpo1x0uyWCxjXYfrT/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            className="hidden lg:inline"
+          >
             Resume
           </a>
         </button>
@@ -163,37 +175,43 @@ const Home = () => {
             <div className="flex flex-col items-center space-y-8">
               {/* Name */}
               <div className="flex flex-wrap flex-col items-start w-full">
-                <label className="font-bold mb-2">Name</label>
+                <label className="font-bold mb-2">Name*</label>
                 <input
                   type="text"
                   className="text-customBlack rounded-md p-2 w-full focus:outline-none focus:ring focus:ring-customBlack md:p-3"
                   placeholder="Name: John Doe"
                   onChange={(e) => setName(e.target.value)}
+                  required
                 />
               </div>
               {/* Email */}
               <div className="flex flex-wrap flex-col items-start w-full">
-                <label className="font-bold mb-2">Email</label>
+                <label className="font-bold mb-2">Email*</label>
                 <input
-                  type="text"
+                  type="email"
                   className="text-customBlack rounded-md p-2 w-full focus:outline-none focus:ring focus:ring-customBlack md:p-3"
                   placeholder="johndoe37@gmail.com"
                   onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
               </div>
               {/* Message */}
               <div className="flex flex-wrap flex-col items-start w-full">
-                <label className="font-bold mb-2">Message</label>
+                <label className="font-bold mb-2">Message*</label>
                 <textarea
                   className="text-customBlack rounded-md w-full p-2 focus:outline-none focus:ring focus:ring-customBlack"
                   cols={30}
                   rows={10}
                   placeholder="Your Message"
                   onChange={(e) => setMessage(e.target.value)}
-                ></textarea>
+                  required
+                />
               </div>
               {/* Send Button */}
-              <button className="border rounded-md border-customRed bg-customRed p-2 w-full md:p-3">
+              <button
+                type="submit"
+                className="border rounded-md border-customRed bg-customRed p-2 w-full md:p-3"
+              >
                 Send
               </button>
             </div>
