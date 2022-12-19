@@ -18,7 +18,7 @@ const Home = () => {
     setSubmitted(true)
 
     if (name && email && message) {
-      fetch("http://localhost:8000/data", {
+      fetch("https://fake-server-portfolio.vercel.app/data", {
         method: "POST",
         headers: {"Content-type": "application/json"},
         body: JSON.stringify({ name, email, message }),
