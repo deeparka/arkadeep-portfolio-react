@@ -5,24 +5,39 @@ import whatsapp from "../images/whatsapp.png";
 import github from "../images/github.png";
 import { Link } from "react-router-dom";
 import ScrollToTop from "../lib/ScrollToTop";
+import emailjs from "@emailjs/browser";
 
 const Home = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [submitted, setSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState(false);
+
+  const data = {
+    name,
+    email,
+    message,
+  };
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(name, email, message);
-    setSubmitted(true)
+    console.log(data.name);
+    console.log(data.email);
+    console.log(data.message);
+    setSubmitted(true);
 
     if (name && email && message) {
-      fetch("https://fake-server-portfolio.vercel.app/data", {
-        method: "POST",
-        headers: {"Content-type": "application/json"},
-        body: JSON.stringify({ name, email, message }),
-      });
+      emailjs
+        .send(
+          process.env.REACT_APP_SERVICE_ID,
+          process.env.REACT_APP_TEMPLATE_ID,
+          data,
+          process.env.REACT_APP_PUBLIC_KEY
+        )
+        .then(
+          (result) => console.log(result.text),
+          (error) => console.log(error.text)
+        );
     }
   }
 
@@ -173,60 +188,69 @@ const Home = () => {
 
       {/* Message Form */}
       <div className="bg-body-background py-24 content-center px-8 md:px-16 lg:px-100px">
-        <div className="py-12 px-6 bg-customGrey max-w-3xl m-auto rounded-xl drop-shadow-lg">
-          {!submitted && (<h1 className="text-center mb-6 text-xl sm:text-4xl">
-            Send a message
-          </h1>)}
-          {!submitted && (<form onSubmit={handleSubmit}>
-            <div className="flex flex-col items-center space-y-8">
-              {/* Name */}
-              <div className="flex flex-wrap flex-col items-start w-full">
-                <label className="font-bold mb-2">Name*</label>
-                <input
-                  type="text"
-                  className="text-customBlack rounded-md p-2 w-full focus:outline-none focus:ring focus:ring-customBlack md:p-3"
-                  placeholder="Name: John Doe"
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                />
+        {!submitted && (
+          <div className="py-12 px-6 bg-customGrey max-w-3xl m-auto rounded-xl drop-shadow-lg">
+            <h1 className="text-center mb-6 text-xl sm:text-4xl">
+              Send a message
+            </h1>
+            <form onSubmit={handleSubmit}>
+              <div className="flex flex-col items-center space-y-8">
+                {/* Name */}
+                <div className="flex flex-wrap flex-col items-start w-full">
+                  <label className="font-bold mb-2">Name*</label>
+                  <input
+                    type="text"
+                    className="text-customBlack rounded-md p-2 w-full focus:outline-none focus:ring focus:ring-customBlack md:p-3"
+                    placeholder="Name: John Doe"
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                </div>
+                {/* Email */}
+                <div className="flex flex-wrap flex-col items-start w-full">
+                  <label className="font-bold mb-2">Email*</label>
+                  <input
+                    type="email"
+                    className="text-customBlack rounded-md p-2 w-full focus:outline-none focus:ring focus:ring-customBlack md:p-3"
+                    placeholder="johndoe37@gmail.com"
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </div>
+                {/* Message */}
+                <div className="flex flex-wrap flex-col items-start w-full">
+                  <label className="font-bold mb-2">Message*</label>
+                  <textarea
+                    className="text-customBlack rounded-md w-full p-2 focus:outline-none focus:ring focus:ring-customBlack"
+                    cols={30}
+                    rows={10}
+                    placeholder="Your Message"
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
+                  />
+                </div>
+                {/* Send Button */}
+                <button
+                  type="submit"
+                  className="border rounded-md border-customRed bg-customRed p-2 w-full md:p-3"
+                >
+                  Send
+                </button>
               </div>
-              {/* Email */}
-              <div className="flex flex-wrap flex-col items-start w-full">
-                <label className="font-bold mb-2">Email*</label>
-                <input
-                  type="email"
-                  className="text-customBlack rounded-md p-2 w-full focus:outline-none focus:ring focus:ring-customBlack md:p-3"
-                  placeholder="johndoe37@gmail.com"
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </div>
-              {/* Message */}
-              <div className="flex flex-wrap flex-col items-start w-full">
-                <label className="font-bold mb-2">Message*</label>
-                <textarea
-                  className="text-customBlack rounded-md w-full p-2 focus:outline-none focus:ring focus:ring-customBlack"
-                  cols={30}
-                  rows={10}
-                  placeholder="Your Message"
-                  onChange={(e) => setMessage(e.target.value)}
-                  required
-                />
-              </div>
-              {/* Send Button */}
-              <button
-                type="submit"
-                className="border rounded-md border-customRed bg-customRed p-2 w-full md:p-3"
-              >
-                Send
-              </button>
-            </div>
-          </form>)}
-          {/* after submitting the form */}
-          {submitted && (<h1 className="text-center mb-6 text-xl sm:text-4xl">
-            Thank you for sending me message
-          </h1>)}
-        </div>
+            </form>
+          </div>
+        )}
+        {/* after submitting the form */}
+        {submitted && (
+          <div className="py-12 px-6 bg-customGrey max-w-3xl m-auto rounded-xl drop-shadow-lg">
+            <p className="text-center text-lg sm:text-4xl">
+              Thank you for sending me message
+            </p>
+            <p className="mt-3 text-center text-base sm:text-2xl">
+              I will contact with you asap
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
