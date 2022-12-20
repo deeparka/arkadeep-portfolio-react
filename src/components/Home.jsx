@@ -6,18 +6,24 @@ import github from "../images/github.png";
 import { Link } from "react-router-dom";
 import ScrollToTop from "../lib/ScrollToTop";
 import emailjs from "@emailjs/browser";
+import ContactDrawer from "./ContactDrawer";
 
 const Home = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [showContacts, setShowContacts] = useState(false)
 
   const data = {
     name,
     email,
     message,
   };
+
+  function handleContacts() {
+    showContacts ? setShowContacts(false) : setShowContacts(true)
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -42,7 +48,7 @@ const Home = () => {
   }
 
   return (
-    <div className="pt-16 space-y-24 sm:pt-20">
+    <div className="pt-16 space-y-24 sm:pt-20" onClick={() => showContacts ? setShowContacts(false) : null}>
       {/* Scroll to top component is for render the page from starting */}
       <ScrollToTop />
       {/* Name */}
@@ -83,9 +89,10 @@ const Home = () => {
           what can make the users happy while using my applications.
         </p>
         {/* only for smaller screen than medium  */}
-        <button className="bg-customRed mt-6 px-14 py-3 rounded-xl text-xl shadow-same md:hidden">
+        <button className="bg-customRed mt-6 px-14 py-3 rounded-xl text-xl shadow-same md:hidden" onClick={handleContacts}>
           Contacts
         </button>
+        {showContacts && <ContactDrawer />}
       </section>
 
       {/* Contacts */}
