@@ -6,7 +6,7 @@ function MenuDrawer() {
   return (
     <div
       id="drawer-example"
-      className="fixed top-68px left-0 z-40 h-auto px-11 py-6 overflow-y-auto bg-customBlack w-full text-customWhite"
+      className="fixed top-68px left-0 z-40 h-auto px-11 py-6 overflow-y-auto bg-customGrey w-full text-customWhite"
     >
       <Link to='/'>
         <p className="text-xl font-semibold py-2">Home</p>

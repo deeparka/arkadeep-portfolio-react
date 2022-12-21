@@ -13,7 +13,7 @@ const Home = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
-  const [showContacts, setShowContacts] = useState(false)
+  const [showContacts, setShowContacts] = useState(false);
 
   const data = {
     name,
@@ -22,7 +22,7 @@ const Home = () => {
   };
 
   function handleContacts() {
-    showContacts ? setShowContacts(false) : setShowContacts(true)
+    showContacts ? setShowContacts(false) : setShowContacts(true);
   }
 
   function handleSubmit(e) {
@@ -48,14 +48,17 @@ const Home = () => {
   }
 
   return (
-    <div className="pt-16 space-y-24 sm:pt-20" onClick={() => showContacts ? setShowContacts(false) : null}>
+    <div
+      className="pt-16 space-y-24 sm:pt-20"
+      onClick={() => (showContacts ? setShowContacts(false) : null)}
+    >
       {/* Scroll to top component is for render the page from starting */}
       <ScrollToTop />
       {/* Name */}
       <div className="bg-body-background bg-cover pt-48 pb-40 px-5 text-center md:px-0">
         <h1 className="lg:tracking-wider">Hello, my name is Arkadeep Prasad</h1>
         <h4 className="my-5">I’m an UI & Front-End Developer</h4>
-        <button className="bg-customRed my-3 px-14 py-3 rounded-xl text-xl shadow-lg shadow-same">
+        <button className="bg-customRed my-3 px-14 py-3 rounded-xl text-xl shadow-[0_15px_25px_-8px_#EDEDED]">
           {/* display this text on medium and less screens */}
           <a
             href="https://drive.google.com/file/d/1URgGYuzjth75d8SMpo1x0uyWCxjXYfrT/view?usp=sharing"
@@ -89,7 +92,10 @@ const Home = () => {
           what can make the users happy while using my applications.
         </p>
         {/* only for smaller screen than medium  */}
-        <button className="bg-customRed mt-6 px-14 py-3 rounded-xl text-xl shadow-same md:hidden" onClick={handleContacts}>
+        <button
+          className="bg-customRed mt-6 px-14 py-3 rounded-xl text-xl shadow-[0_15px_25px_-8px_#EDEDED] md:hidden"
+          onClick={handleContacts}
+        >
           Contacts
         </button>
         {showContacts && <ContactDrawer />}
@@ -142,7 +148,7 @@ const Home = () => {
               </Link>
               {/* for large screens and bigger */}
               <Link to="/projects">
-                <button className="hidden bg-customRed rounded-xl text-xl px-14 py-3 shadow-same lg:inline-flex">
+                <button className="hidden bg-customRed rounded-xl text-xl px-14 py-3 shadow-[0_15px_25px_-8px_#EDEDED] lg:inline-flex">
                   Projects
                 </button>
               </Link>

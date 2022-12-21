@@ -26,9 +26,6 @@ module.exports = {
       'customRed': '#DA0037',
       'customWhite': '#EDEDED'
     },
-    boxShadow: {
-      'same': '3px 8px 12px 5px #444444'
-    },
     backgroundImage: {
       'body-background': "url('/src/images/bg-leaf.webp')"
     },
