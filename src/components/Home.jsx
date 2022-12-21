@@ -27,9 +27,9 @@ const Home = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(data.name);
-    console.log(data.email);
-    console.log(data.message);
+    // console.log(data.name);
+    // console.log(data.email);
+    // console.log(data.message);
     setSubmitted(true);
 
     if (name && email && message) {
