@@ -20,7 +20,9 @@ const NavBar = () => {
     <nav className="fixed top-0 left-0 right-0 bg-customGrey font-bold flex justify-between items-center z-10 px-6 py-4 sm:py-6 sm:px-8 md:px-16 lg:px-100px">
       <div className="flex items-center">
         <img className="rounded-full h-9 w-9 mr-2" src={arkadeepImage} alt="" />
-        <p className="lg:font-bold sm:text-sm md:text-lg">Arkadeep Prasad</p>
+        <p className="animate-pulse sm:text-sm md:text-lg lg:font-bold">
+          Arkadeep Prasad
+        </p>
       </div>
       {!showMenu && (
         <svg
