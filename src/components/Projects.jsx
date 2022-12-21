@@ -4,8 +4,8 @@ import ScrollToTop from "../lib/ScrollToTop";
 function Projects() {
   return (
     <div className="mb-6 pt-16 px-6 flex flex-wrap justify-around gap-5 sm:px-8 sm:pt-20 md:px-16 lg:px-100px">
-      <ScrollToTop/>
-      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey group">
+      <ScrollToTop />
+      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey transition transform ease-in-out delay-100 hover:scale-110 hover:-translate-y-1">
         <div className="space-y-3">
           <h2 className="">Twitter 2.0</h2>
           <p className="text-lg">
@@ -42,7 +42,7 @@ function Projects() {
         <div className="flex flex-row flex-wrap space-x-2">
           <a
             href="https://github.com/deeparka/twitter-2.0"
-            className="block bg-customRed mt-3 px-7 py-3 rounded-xl"
+            className="block bg-customRed mt-3 px-7 py-3 rounded-xl transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1"
             target="_blank"
             rel="noreferrer"
           >
@@ -50,7 +50,7 @@ function Projects() {
           </a>
           <a
             href="https://twitter-2-0-teal.vercel.app/"
-            className="block bg-customRed mt-3 px-7 py-3 rounded-xl"
+            className="block bg-customRed mt-3 px-7 py-3 rounded-xl transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1"
             target="_blank"
             rel="noreferrer"
           >
@@ -58,7 +58,7 @@ function Projects() {
           </a>
         </div>
       </div>
-      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey group">
+      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey transition transform ease-in-out delay-100 hover:scale-110 hover:-translate-y-1">
         <div className="space-y-3">
           <h2 className="">Medium 2.0</h2>
           <p className="text-lg">
@@ -94,7 +94,7 @@ function Projects() {
         <div className="flex flex-row flex-wrap space-x-2">
           <a
             href="https://github.com/deeparka/medium-next-sanity"
-            className="block bg-customRed mt-3 px-7 py-3 rounded-xl"
+            className="block bg-customRed mt-3 px-7 py-3 rounded-xl transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1"
             target="_blank"
             rel="noreferrer"
           >
@@ -102,7 +102,7 @@ function Projects() {
           </a>
           <a
             href="https://medium-next-sanity-blond.vercel.app/"
-            className="block bg-customRed mt-3 px-7 py-3 rounded-xl"
+            className="block bg-customRed mt-3 px-7 py-3 rounded-xl transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1"
             target="_blank"
             rel="noreferrer"
           >
@@ -110,7 +110,7 @@ function Projects() {
           </a>
         </div>
       </div>
-      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey group ">
+      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey transition transform ease-in-out delay-100 hover:scale-110 hover:-translate-y-1">
         <div className="space-y-3">
           <h2 className="">Hulu 2.0</h2>
           <p className="text-lg">
@@ -138,7 +138,7 @@ function Projects() {
         <div className="flex flex-row flex-wrap space-x-2">
           <a
             href="https://github.com/deeparka/hulu-2.0"
-            className="block bg-customRed mt-3 px-7 py-3 rounded-xl"
+            className="block bg-customRed mt-3 px-7 py-3 rounded-xl transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1"
             target="_blank"
             rel="noreferrer"
           >
@@ -146,7 +146,7 @@ function Projects() {
           </a>
           <a
             href="https://hulu-2-0-cyan.vercel.app/"
-            className="block bg-customRed mt-3 px-7 py-3 rounded-xl"
+            className="block bg-customRed mt-3 px-7 py-3 rounded-xl transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1"
             target="_blank"
             rel="noreferrer"
           >
@@ -154,7 +154,7 @@ function Projects() {
           </a>
         </div>
       </div>
-      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey group ">
+      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey transition transform ease-in-out delay-100 hover:scale-110 hover:-translate-y-1">
         <div className="space-y-3">
           <h2 className="">Weather Application</h2>
           <p className="text-lg">
@@ -185,7 +185,7 @@ function Projects() {
         <div className="flex flex-row flex-wrap space-x-2">
           <a
             href="https://github.com/deeparka/weather-app"
-            className="block bg-customRed mt-3 px-7 py-3 rounded-xl"
+            className="block bg-customRed mt-3 px-7 py-3 rounded-xl transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1"
             target="_blank"
             rel="noreferrer"
           >
@@ -193,7 +193,7 @@ function Projects() {
           </a>
           <a
             href="https://weather-app-pi-three.vercel.app/"
-            className="block bg-customRed mt-3 px-7 py-3 rounded-xl"
+            className="block bg-customRed mt-3 px-7 py-3 rounded-xl transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1"
             target="_blank"
             rel="noreferrer"
           >
@@ -201,7 +201,7 @@ function Projects() {
           </a>
         </div>
       </div>
-      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey group ">
+      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey transition transform ease-in-out delay-100 hover:scale-110 hover:-translate-y-1">
         <div className="space-y-3">
           <h2 className="">Dojo-Blog Application</h2>
           <p className="text-lg">
@@ -229,7 +229,7 @@ function Projects() {
         <div className="flex flex-row flex-wrap space-x-2">
           <a
             href="https://github.com/deeparka/dojo-blog"
-            className="block bg-customRed mt-3 px-7 py-3 rounded-xl"
+            className="block bg-customRed mt-3 px-7 py-3 rounded-xl transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1"
             target="_blank"
             rel="noreferrer"
           >
@@ -237,7 +237,7 @@ function Projects() {
           </a>
           <a
             href="https://dojo-blog-delta.vercel.app/"
-            className="block bg-customRed mt-3 px-7 py-3 rounded-xl"
+            className="block bg-customRed mt-3 px-7 py-3 rounded-xl transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1"
             target="_blank"
             rel="noreferrer"
           >
@@ -245,7 +245,7 @@ function Projects() {
           </a>
         </div>
       </div>
-      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey group ">
+      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey transition transform ease-in-out delay-100 hover:scale-110 hover:-translate-y-1">
         <div className="space-y-3">
           <h2 className="">Scramble Game Application</h2>
           <p className="text-lg">
@@ -269,7 +269,7 @@ function Projects() {
         <div className="flex flex-row flex-wrap space-x-2">
           <a
             href="https://github.com/deeparka/scramble-game"
-            className="block bg-customRed mt-3 px-7 py-3 rounded-xl"
+            className="block bg-customRed mt-3 px-7 py-3 rounded-xl transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1"
             target="_blank"
             rel="noreferrer"
           >
@@ -277,7 +277,7 @@ function Projects() {
           </a>
           <a
             href="https://scramble-game-nine.vercel.app/"
-            className="block bg-customRed mt-3 px-7 py-3 rounded-xl"
+            className="block bg-customRed mt-3 px-7 py-3 rounded-xl transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1"
             target="_blank"
             rel="noreferrer"
           >
@@ -285,7 +285,7 @@ function Projects() {
           </a>
         </div>
       </div>
-      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey group ">
+      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey transition transform ease-in-out delay-100 hover:scale-110 hover:-translate-y-1">
         <div className="space-y-3">
           <h2 className="">Bluetooth KeyChain Web Application</h2>
           <p className="text-lg">
@@ -308,7 +308,7 @@ function Projects() {
         <div className="flex flex-row flex-wrap space-x-2">
           <a
             href="https://www.figma.com/file/zViuTgjhvODAuxOu1XIIYw/Bluetooth-KeyChain-Website?t=mDstwIdr1zzvU8YS-6"
-            className="block bg-customRed mt-3 px-7 py-3 rounded-xl"
+            className="block bg-customRed mt-3 px-7 py-3 rounded-xl transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1"
             target="_blank"
             rel="noreferrer"
           >
@@ -316,7 +316,7 @@ function Projects() {
           </a>
           <a
             href="https://www.figma.com/proto/zViuTgjhvODAuxOu1XIIYw/Bluetooth-KeyChain-Website?node-id=0%3A1"
-            className="block bg-customRed mt-3 px-7 py-3 rounded-xl"
+            className="block bg-customRed mt-3 px-7 py-3 rounded-xl transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1"
             target="_blank"
             rel="noreferrer"
           >
@@ -324,7 +324,7 @@ function Projects() {
           </a>
         </div>
       </div>
-      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey group ">
+      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey transition transform ease-in-out delay-100 hover:scale-110 hover:-translate-y-1">
         <div className="space-y-3">
           <h2 className="">Bluetooth KeyChain iOS Application</h2>
           <p className="text-lg">
@@ -349,7 +349,7 @@ function Projects() {
         <div className="flex flex-row flex-wrap space-x-2">
           <a
             href="https://www.figma.com/file/NsMQdfUYQxLzcgawettKMv/Bluetooth-KeyChain-Draft?t=mDstwIdr1zzvU8YS-6"
-            className="block bg-customRed mt-3 px-7 py-3 rounded-xl"
+            className="block bg-customRed mt-3 px-7 py-3 rounded-xl transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1"
             target="_blank"
             rel="noreferrer"
           >
@@ -357,7 +357,7 @@ function Projects() {
           </a>
           <a
             href="https://www.figma.com/proto/NsMQdfUYQxLzcgawettKMv/Bluetooth-KeyChain-Draft?node-id=0%3A1"
-            className="block bg-customRed mt-3 px-7 py-3 rounded-xl"
+            className="block bg-customRed mt-3 px-7 py-3 rounded-xl transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1"
             target="_blank"
             rel="noreferrer"
           >
@@ -365,7 +365,7 @@ function Projects() {
           </a>
         </div>
       </div>
-      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey group ">
+      <div className="max-w-sm rounded-xl overflow-hidden mt-8 lg:mt-14 py-4 px-6 bg-customGrey transition transform ease-in-out delay-100 hover:scale-110 hover:-translate-y-1">
         <div className="space-y-3">
           <h2 className="">Quiz Web Application</h2>
           <p className="text-lg">
@@ -389,7 +389,7 @@ function Projects() {
         <div className="flex flex-row flex-wrap space-x-2">
           <a
             href="https://www.figma.com/file/YXdOeuwPsk0nLTF0RAgMEt/Quiz-Application?t=mDstwIdr1zzvU8YS-6"
-            className="block bg-customRed mt-3 px-7 py-3 rounded-xl"
+            className="block bg-customRed mt-3 px-7 py-3 rounded-xl transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1"
             target="_blank"
             rel="noreferrer"
           >
@@ -397,7 +397,7 @@ function Projects() {
           </a>
           <a
             href="https://www.figma.com/proto/YXdOeuwPsk0nLTF0RAgMEt/Quiz-Application?node-id=0%3A1"
-            className="block bg-customRed mt-3 px-7 py-3 rounded-xl"
+            className="block bg-customRed mt-3 px-7 py-3 rounded-xl transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1"
             target="_blank"
             rel="noreferrer"
           >

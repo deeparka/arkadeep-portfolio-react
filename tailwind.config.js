@@ -24,6 +24,7 @@ module.exports = {
       'customBlack': '#171717',
       'customGrey': '#444444',
       'customRed': '#DA0037',
+      'customHoverRed': '#C10031',
       'customWhite': '#EDEDED'
     },
     backgroundImage: {

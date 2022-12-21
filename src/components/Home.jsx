@@ -58,7 +58,7 @@ const Home = () => {
       <div className="bg-body-background bg-cover pt-48 pb-40 px-5 text-center md:px-0">
         <h1 className="lg:tracking-wider">Hello, my name is Arkadeep Prasad</h1>
         <h4 className="my-5">I’m an UI & Front-End Developer</h4>
-        <button className="bg-customRed my-3 px-14 py-3 rounded-xl text-xl shadow-[0_15px_25px_-8px_#EDEDED]">
+        <button className="bg-customRed my-3 px-14 py-3 rounded-xl text-xl shadow-[0_15px_25px_-8px_#EDEDED] transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1">
           {/* display this text on medium and less screens */}
           <a
             href="https://drive.google.com/file/d/1URgGYuzjth75d8SMpo1x0uyWCxjXYfrT/view?usp=sharing"
@@ -105,22 +105,38 @@ const Home = () => {
       <section id="contact" className="text-center md:px-16 lg:px-100px">
         {/* only for bigger screen than medium */}
         <div className="hidden md:flex items-start justify-center py-16 md:space-x-11 md:text-xs lg:space-x-20 lg:text-sm">
-          <div className="">
-            <img src={gmail} alt="Gmail" className="h-28 w-28 ml-5 lg:ml-6" />
+          <div className="group">
+            <img
+              src={gmail}
+              alt="Gmail"
+              className="h-28 w-28 ml-5 group-hover:animate-bounce lg:ml-6"
+            />
             <p className="">arkadeep180@gmail.com</p>
           </div>
-          <div className="">
-            <img src={linkedin} alt="LinkedIn" className="h-28 w-28 ml-2" />
+          <div className="group">
+            <img
+              src={linkedin}
+              alt="LinkedIn"
+              className="h-28 w-28 ml-2 group-hover:animate-bounce"
+            />
             <a href="https://www.linkedin.com/in/arkadeep-prasad-1b5074201/">
               Arkadeep Prasad
             </a>
           </div>
-          <div className="">
-            <img src={whatsapp} alt="Whatsapp" className="h-28 w-28 md:ml-2" />
+          <div className="group">
+            <img
+              src={whatsapp}
+              alt="Whatsapp"
+              className="h-28 w-28 group-hover:animate-bounce md:ml-2"
+            />
             <p className="">+91-9593527725</p>
           </div>
-          <div className="">
-            <img src={github} alt="Github" className="h-28 w-28" />
+          <div className="group">
+            <img
+              src={github}
+              alt="Github"
+              className="h-28 w-28 group-hover:animate-bounce"
+            />
             <a href="https://github.com/deeparka">deeparka</a>
           </div>
         </div>
@@ -148,7 +164,7 @@ const Home = () => {
               </Link>
               {/* for large screens and bigger */}
               <Link to="/projects">
-                <button className="hidden bg-customRed rounded-xl text-xl px-14 py-3 shadow-[0_15px_25px_-8px_#EDEDED] lg:inline-flex">
+                <button className="hidden bg-customRed rounded-xl text-xl px-14 py-3 shadow-[0_15px_25px_-8px_#EDEDED] transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1 lg:inline-flex">
                   Projects
                 </button>
               </Link>
