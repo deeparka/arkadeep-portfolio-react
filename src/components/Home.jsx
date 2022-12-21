@@ -261,7 +261,7 @@ const Home = () => {
                 {/* Send Button */}
                 <button
                   type="submit"
-                  className="border rounded-md border-customRed bg-customRed p-2 w-full md:p-3"
+                  className="border rounded-md border-customRed bg-customRed p-2 w-full md:p-3 hover:bg-customHoverRed"
                 >
                   Send
                 </button>
