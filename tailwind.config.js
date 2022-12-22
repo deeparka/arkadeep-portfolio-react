@@ -23,6 +23,7 @@ module.exports = {
     colors: {
       'customBlack': '#171717',
       'customGrey': '#444444',
+      'customDrawerGrey': '#696969',
       'customRed': '#DA0037',
       'customHoverRed': '#C10031',
       'customWhite': '#EDEDED'

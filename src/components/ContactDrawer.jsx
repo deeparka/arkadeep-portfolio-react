@@ -10,12 +10,10 @@ import "alertifyjs/build/css/alertify.css";
 function ContactDrawer() {
   function handleLinkedIn() {
     window.open("https://www.linkedin.com/in/arkadeep-prasad-1b5074201/");
-    // window.location.href = 'https://www.linkedin.com/in/arkadeep-prasad-1b5074201/'
   }
 
   function handleGithub() {
     window.open("https://github.com/deeparka");
-    // window.location.href = 'https://www.linkedin.com/in/arkadeep-prasad-1b5074201/'
   }
 
   function handleTwitter() {
@@ -31,7 +29,7 @@ function ContactDrawer() {
   }
 
   return (
-    <div className="fixed top-180px left-2 w-auto h-auto p-5 z-40 rounded-xl bg-customGrey
+    <div className="fixed top-180px left-2 w-auto h-auto p-5 z-40 rounded-xl bg-customDrawerGrey
     ">
       <img
         src={linkedin}
