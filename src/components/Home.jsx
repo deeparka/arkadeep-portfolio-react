@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import ScrollToTop from "../lib/ScrollToTop";
 import emailjs from "@emailjs/browser";
 import ContactDrawer from "./ContactDrawer";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const [name, setName] = useState("");
@@ -56,9 +57,32 @@ const Home = () => {
       <ScrollToTop />
       {/* Name */}
       <div className="bg-body-background bg-cover pt-48 pb-40 px-5 text-center md:px-0">
-        <h1 className="lg:tracking-wider">Hello, my name is Arkadeep Prasad</h1>
-        <h4 className="my-5">I’m an UI & Front-End Developer</h4>
-        <button className="bg-customRed my-3 px-14 py-3 rounded-xl text-xl shadow-[0_15px_25px_-8px_#EDEDED] transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1">
+        <motion.h1
+          className="lg:tracking-wider"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          Hello, my name is Arkadeep Prasad
+        </motion.h1>
+        <motion.h4
+          className="my-5"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          I’m an UI & Front-End Developer
+        </motion.h4>
+        <motion.button
+          className="bg-customRed my-3 px-14 py-3 rounded-xl text-xl shadow-[0_15px_25px_-8px_#EDEDED] transition transform ease-in-out delay-100 hover:bg-customHoverRed"
+          initial={{ scale: 0 }}
+          animate={{ rotate: 360, scale: 1 }}
+          transition={{
+            type: "tween",
+            duration: 0.2,
+          }}
+          whileHover={{ scale: 1.3}}
+        >
           {/* display this text on medium and less screens */}
           <a
             href="https://drive.google.com/file/d/1URgGYuzjth75d8SMpo1x0uyWCxjXYfrT/view?usp=sharing"
@@ -75,7 +99,7 @@ const Home = () => {
           >
             Resume
           </a>
-        </button>
+        </motion.button>
       </div>
 
       {/* About Me */}
@@ -164,9 +188,9 @@ const Home = () => {
               </Link>
               {/* for large screens and bigger */}
               <Link to="/projects">
-                <button className="hidden bg-customRed rounded-xl text-xl px-14 py-3 shadow-[0_15px_25px_-8px_#EDEDED] transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1 lg:inline-flex">
+                <motion.button className="hidden bg-customRed rounded-xl text-xl px-14 py-3 shadow-[0_15px_25px_-8px_#EDEDED] transition transform ease-in-out delay-100 hover:scale-110 hover:bg-customHoverRed hover:-translate-y-1 lg:inline-flex">
                   Projects
-                </button>
+                </motion.button>
               </Link>
             </div>
           </div>
@@ -174,42 +198,78 @@ const Home = () => {
             <h1>My Skills</h1>
             <div className="bg-customRed mx-auto mt-2 mb-5 w-28 h-1 rounded" />
             <div className="flex flex-wrap justify-evenly px-6 sm:px-8">
-              <div className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28">
+              <motion.div
+                className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28"
+                whileHover={{ scale: 1.2, rotate: 360 }}
+              >
                 HTML
-              </div>
-              <div className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28">
+              </motion.div>
+              <motion.div
+                className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28"
+                whileHover={{ scale: 1.2, rotate: 360 }}
+              >
                 CSS
-              </div>
-              <div className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28">
+              </motion.div>
+              <motion.div
+                className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28"
+                whileHover={{ scale: 1.2, rotate: 360 }}
+              >
                 SCSS
-              </div>
-              <div className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28">
+              </motion.div>
+              <motion.div
+                className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28"
+                whileHover={{ scale: 1.2, rotate: 360 }}
+              >
                 Tailwind CSS
-              </div>
-              <div className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28">
+              </motion.div>
+              <motion.div
+                className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28"
+                whileHover={{ scale: 1.2, rotate: 360 }}
+              >
                 JavaScript
-              </div>
-              <div className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28">
+              </motion.div>
+              <motion.div
+                className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28"
+                whileHover={{ scale: 1.2, rotate: 360 }}
+              >
                 React
-              </div>
-              <div className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28">
+              </motion.div>
+              <motion.div
+                className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28"
+                whileHover={{ scale: 1.2, rotate: 360 }}
+              >
                 Next
-              </div>
-              <div className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28">
+              </motion.div>
+              <motion.div
+                className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28"
+                whileHover={{ scale: 1.2, rotate: 360 }}
+              >
                 Git
-              </div>
-              <div className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28">
+              </motion.div>
+              <motion.div
+                className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28"
+                whileHover={{ scale: 1.2, rotate: 360 }}
+              >
                 Github
-              </div>
-              <div className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28">
+              </motion.div>
+              <motion.div
+                className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28"
+                whileHover={{ scale: 1.2, rotate: 360 }}
+              >
                 Python
-              </div>
-              <div className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28">
+              </motion.div>
+              <motion.div
+                className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28"
+                whileHover={{ scale: 1.2, rotate: 360 }}
+              >
                 Java
-              </div>
-              <div className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28">
+              </motion.div>
+              <motion.div
+                className="bg-customGrey px-1 py-3 mx-2 my-2 rounded h-auto w-28"
+                whileHover={{ scale: 1.2, rotate: 360 }}
+              >
                 Figma
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
