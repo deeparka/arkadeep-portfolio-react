@@ -81,7 +81,7 @@ const Home = () => {
             type: "tween",
             duration: 0.2,
           }}
-          whileHover={{ scale: 1.3}}
+          whileHover={{ scale: 1.3 }}
         >
           {/* display this text on medium and less screens */}
           <a
