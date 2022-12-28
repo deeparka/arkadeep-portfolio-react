@@ -39,7 +39,7 @@ export function handleWeatherCode(e) {
 
 export function handleWeatherLiveLink(e) {
   e.preventDefault();
-  window.open("https://weather-app-pi-three.vercel.app/");
+  window.open("https://weather-app-two-hazel-25.vercel.app/");
 }
 
 // Dojo Blog Application
