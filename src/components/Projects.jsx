@@ -2,6 +2,7 @@ import React from "react";
 import ScrollToTop from "../lib/ScrollToTop";
 import { FaGithub, FaFigma } from "react-icons/fa";
 import twitter2 from "../images/twitter-2.png";
+import medium from "../images/medium.png";
 import hulu2 from "../images/hulu-2.png";
 import weather from "../images/weather.png";
 import dojoBlog from "../images/dojo-blog.png";
@@ -86,7 +87,7 @@ function Projects() {
         </div>
       </div>
       <div className="max-w-sm rounded-xl shadow-lg shadow-customDrawerGrey overflow-hidden mt-8 lg:mt-14 bg-customGrey group transition transform ease-in-out delay-100 hover:scale-110 hover:-translate-y-1 lg:cursor-pointer">
-        <img src={twitter2} alt="" className="w-full" />
+        <img src={medium} alt="" className="w-full" />
         <div className="py-4 px-6">
           <div className="space-y-3">
             <div className="flex justify-between items-center">
@@ -106,9 +107,8 @@ function Projects() {
               It is a clone application of Medium. In this application anyone
               can read any blog article they want and can comment in any blog
               they want. The comments will be shown under the article once the
-              writer approves the comments. Otherwise it will not be shown. Any
-              user can register as a new author if they want. Currently I'm
-              working on the create blog feature.
+              writer approves the comments. Otherwise it will not be shown.
+              Currently I'm working on the create blog and author feature.
             </p>
           </div>
           <hr className="my-4 text-customWhite" />

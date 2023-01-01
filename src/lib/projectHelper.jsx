@@ -17,7 +17,7 @@ export function handleMedium2Code(e) {
 
 export function handleMedium2LiveLink(e) {
   e.preventDefault();
-  window.open("https://medium-next-sanity-blond.vercel.app/");
+  window.open("https://medium-next-sanity-omega.vercel.app/");
 }
 
 // Hulu
